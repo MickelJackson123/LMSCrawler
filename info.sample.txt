@@ -1,0 +1,4 @@
+your_student_id
+your_password
+sat,12:0
+sun,13:0
