@@ -33,6 +33,7 @@ opt.add_experimental_option("prefs", {
 })
 opt.add_argument("--mute-audio")
 
+# If you don't have compatible version of Chrome selenium, you can uncomment below and comment the next
 # browser = webdriver.Chrome(ChromeDriverManager().install(), options=opt)
 browser = webdriver.Chrome(expanduser('~') + '/Downloads/chromedriver', options=opt)
 browser.get('http://lms.ui.ac.ir/login/')
