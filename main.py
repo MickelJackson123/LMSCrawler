@@ -1,9 +1,8 @@
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
-
+from os.path import expanduser
 from selenium.webdriver.common.keys import Keys
-
 import time
 import re
 
@@ -30,11 +29,12 @@ opt.add_argument("start-maximized")
 opt.add_argument("--disable-extensions")
 opt.add_experimental_option("prefs", {
     "profile.default_content_setting_values.media_stream_mic": 1,
-    "profile.default_content_setting_values.geolocation": 1,
     "profile.default_content_setting_values.notifications": 1
 })
+opt.add_argument("--mute-audio")
 
-browser = webdriver.Chrome(ChromeDriverManager().install(), options=opt)
+# browser = webdriver.Chrome(ChromeDriverManager().install(), options=opt)
+browser = webdriver.Chrome(expanduser('~') + '/Downloads/chromedriver', options=opt)
 browser.get('http://lms.ui.ac.ir/login/')
 
 username_btn = browser.find_element_by_id("username")
