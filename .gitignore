@@ -7,6 +7,8 @@ reated by https://www.toptal.com/developers/gitignore/api/python,pycharm
 
 # Use your own info.txt
 info.txt
+
+cron.txt
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml

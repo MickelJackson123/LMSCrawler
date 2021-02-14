@@ -2,6 +2,7 @@ day_dic = {"sat": 6, "sun": 0, "mon": 1, "tue": 2, "wed": 3, "thu": 4, "fri": 5}
 static_part = " cd $HOME/PycharmProjects/LMSCrawler && ./runner.sh"
 info = open("info.txt", "r")
 cron = open("cron.txt", "w")
+cron.write("DISPLAY=:0\n\n")
 
 for index, line in enumerate(info.readlines()):
     if index > 1:
