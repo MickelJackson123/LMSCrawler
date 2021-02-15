@@ -11,6 +11,6 @@ for index, line in enumerate(info.readlines()):
         hour_min = line.split(",")[1]
         hour = hour_min.split(":")[0]
         minute = hour_min.split(":")[1]
-        dynamic_part = "{}0 {} * * {}".format(minute, hour, day)
+        dynamic_part = "{}3 {} * * {}".format(minute, hour, day)
         cron_job = dynamic_part + static_part + "\n"
         cron.write(cron_job)
