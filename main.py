@@ -58,4 +58,4 @@ for index, link in enumerate(ss):
     try:
         browser.find_element_by_xpath(xpath="//span/button[2]/span/i").click()
     except:
-        browser.close()
+        pass
